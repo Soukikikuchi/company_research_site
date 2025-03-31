@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- iPhone自動電話リンク無効 -->
+	<meta name="format-detection" content="telephone=no">
+	<!-- icons -->
+	<link rel="icon" href="https://bizrelay.jp/icons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://bizrelay.jp/icons/apple-touch-icon.png">
+	<link rel="manifest" href="https://bizrelay.jp/icons/manifest.webmanifest">
+	<meta name="apple-mobile-web-app-title" content="Bizrelay">
+	<meta name="application-name" content="Bizrelay">
+	<!-- title,keywords,description -->
+	<title>会社を探す | Bizrelay M&A AI企業検索システム</title>
+	<meta name="keywords" content="Bizrelay,M&A AI企業検索システム,類似企業検索,類似会社検索,会社検索,企業検索,法人検索">
+	<meta name="description" content="Bizrelayは類似企業を探すことが出来るAI企業検索システムです。">
+	<!-- sns -->
+	<meta property="og:title" content="Bizrelay M&A AI企業検索システム">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://bizrelay.jp/">
+	<meta property="og:image" content="https://bizrelay.jp/20240717ogimage.png">
+	<meta property="og:site_name" content="Bizrelay">
+	<meta property="og:description" content="Bizrelayは類似企業を探すことが出来るAI企業検索システムです。">
+	<meta property="og:locale" content="ja_JP">
+	<!-- css -->
+	<link type="text/css" href="https://bizrelay.jp/css/reset.css" rel="stylesheet"  media="all" />
+	<link type="text/css" href="https://bizrelay.jp/css/cmm.css" rel="stylesheet"  media="all" />
+	<link type="text/css" href="https://bizrelay.jp/css/form.css" rel="stylesheet"  media="all" />
+	<link type="text/css" href="https://bizrelay.jp/css/header.css" rel="stylesheet"  media="all" />
+	<link type="text/css" href="https://bizrelay.jp/css/contents.css?202408062" rel="stylesheet"  media="all" />
+	<link type="text/css" href="https://bizrelay.jp/css/footer.css" rel="stylesheet"  media="all" />
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+	<style type="text/css">
+/* メニュー */
+#header-inner__navi li ul{
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+#header-inner__navi li ul li{
+  overflow: hidden;
+  width: 200%;
+  height: 0;
+  color: #fff;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  transition: .2s;
+}
+#header-inner__navi li ul li a{
+  padding: 20px 20px;
+  background: #1a5293;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+#header-inner__navi li:hover ul li{
+  overflow: visible;
+  height: 38px;
+  border-bottom: 1px solid #fff;
+}
+#header-inner__navi li ul li a.menu1{
+  width:147px
+}
+	
+/* 検索結果一覧 */
+.result-area2{
+  margin-top: 20px;
+}
+.result-area2 > div + div{
+  margin-top: 10px;
+}
+.result-area2 .result-footer .result-link__area .link-area{
+  margin-left: auto;
+  margin-right: 0;
+}
+.result-area2 .result-footer .result-link__area{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .result-footer > div:not(.result-link__area){
+    margin-right: -45px;
+  }
+  .result-area2 .result-footer .result-link__area{
+    margin-top: 0;
+    width: 350px;
+  }
+}
+  /* 検索結果のみ */
+  .result-area2 .result-half dl{
+    width: 100%;
+  }
+  .result-area2 dt{
+    width: 100%;
+  }
+  .result-area2 dd{
+    width: 100%;
+    padding: 5px 0;
+    padding-left: 1em;
+  }
+  .result-area2 dd.company-cat{
+    padding: 0;
+  }
+  .result-area2 .result-footer .result-link__area p{
+    text-align: center;
+  }
+  .result-area2 .result-footer > div:nth-of-type(1){
+    width: 100%;
+  }
+  @media only screen and (min-width: 768px) {
+    .result-area2 .result-half dl{
+      margin-right: 15px;
+      width: fit-content;
+    }
+    .result-area2 dt{
+      width: 90px;
+	  margin-bottom: 5px;
+	  margin-right:10px;
+	  padding:5px 10px;
+    }
+    .result-area2 dd{
+      padding: 5px 0;
+      width: fit-content;
+	  margin-bottom: 5px;
+    }
+    .result-area2 .result-footer > div:nth-of-type(1){
+      width: calc(100% - 350px);
+    }
+    .result-area2 .result-footer .result-link__area p{
+      text-align: right;
+    }
+  }
+  .result-area2 .company-service span{
+    display: block;
+  }
+	.result-area2 .company-url{
+		width: fit-content;
+	}
+.contents-body__inner{
+  position: relative;
+  padding: 10px 0 0 0;
+}
+
+@media print{
+    .print_none{
+        display: none;
+    }
+}
+li.logged, li.logout{
+   display: none;
+}
+</style>
+</head>
+<body class="">
+	<header id="header" class="clearfix">
+		<div id="header-inner">
+			<div class="flex align-items-center h-100">
+				<h1 id="header-inner__logo">
+					<a href="/">
+						<img src="https://bizrelay.jp/img/common/logo_white.svg" alt="Bizrelay" width="100%" height="auto">
+					</a>
+				</h1>
+				<div id="header-inner__navi">
+					<nav>
+						<ul class="flex">
+							<li><a href="/about" class="page-link__nav">Bizrelayについて</a></li>
+							<li><a href="/search/" class="page-link__nav">会社を探す</a></li>
+							<li><a href="/simulation/" class="page-link__nav">価格を調べる</a></li>
+							<!--<li><a href="/simulation/simulationDummy2.html" class="page-link__nav">価格を調べる</a></li>-->
+							<li><a href="/contact/request.php" class="page-link__nav">譲渡候補選定</a></li>
+							<li><a href="https://note.com/bizrelay" target="_blank" class="page-link__nav">コラム</a></li>
+							<li><a href="/faq" class="page-link__nav">会社情報登録関連</a>
+								<ul>
+									<li><a href="/regist/" class="menu1">ホームページ報告</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+			</div>
+		</div>
+	</header>
+	<main id="contents" class="clearfix">
+		<!-- ぱんくず -->
+		<div class="wrap-container">
+			<div id="breadcrumb" class="clearfix">
+				<ul class="breadcrumb__list flex" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+					<li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem"><a href="/" class="home" itemprop="item"><span itemprop="name">トップ</span></a><span class="icon-arrow__small"></span></li>
+					<li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem"><span itemprop="name">会社を探す</span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="contents-body">
+			<section class='contents-body__inner' id='page-search'>
+				<div class="wrap-container">
+	
+					<dl class="faq ac">
+						<dt><div class="flex"><p>再検索や絞り込み条件を追加する場合はこちら</p><div class="ac-icon"><span class="icon-arrow down"></span></div></div></dt>
+						<dd>
+	
+					<div class="search-container">
+						<form action="/search/" method="post">
+							<div class="search-form__main">
+								<div class="search-form__main__inner">
+									<div class="search-form__top">
+										<h4 class="box-ttl"><label for="">キーワード・会社名で探す</label></h4>
+
+										<input type="text" name="page-search__keyword" id="page-search__keyword" placeholder="キーワード/会社名" class="page-search__keyword" maxlength="50" value="工務店">
+										<div class="radio-area flex mt10">
+											<div>
+
+												<input type="radio" id="search-radio__keyword" name="search-radio__radio" value="keyword" />
+
+												<label for="search-radio__keyword">キーワード</label>
+											</div>
+											<div class="ml50">
+
+												<input type="radio" id="search-radio__company" name="search-radio__radio" value="company" checked="checked" />
+
+												<label for="search-radio__company">会社名</label>
+											</div>
+										</div>
+										
+									</div>
+									<div class="search-box__list mt30 flex">
+										<div><h4 class="box-ttl"><label for="">所在地を選択</label></h4></div>
+										<div class="search-box__contents">
+											<div class="ac-open">
+												<div>
+													<p><span class="icon-plus">&#x002B;</span>所在地を選ぶ</p>
+													<p><span class="icon-plus">&#x002D;</span>所在地を閉じる</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="search-box__main first">
+										<div class="area-map">
+											<div class="area-map__img only-pc"><img src="https://bizrelay.jp/img/common/img_whitemap.png" alt="日本地図"></div>
+											<!-- 北海道・東北 -->
+											<dl class="area-container area-hokkaido">
+												<dt style="margin-bottom: 10px;">
+
+													<h3><input type="checkbox" id="area-hokkaido" name="area" value="1" class="area-parent"><label for="area-hokkaido">北海道・東北</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+
+													<p><input type="checkbox" id="hokkaido" name="prefecture_select" value="1" data-child="area-child" class="area-hokkaido-pref"><label for="hokkaido">北海道</label></p>
+
+													<div class="flex">
+
+														<p><input type="checkbox" id="aomori" name="prefecture_select" value="2" data-child="area-child" class="area-hokkaido-pref"><label for="aomori">青森県</label></p>
+
+
+														<p><input type="checkbox" id="iwate" name="prefecture_select" value="3" data-child="area-child" class="area-hokkaido-pref"><label for="iwate">岩手県</label></p>
+
+
+														<p><input type="checkbox" id="miyagi" name="prefecture_select" value="4" data-child="area-child" class="area-hokkaido-pref"><label for="miyagi">宮城県</label></p>
+
+
+														<p><input type="checkbox" id="akita" name="prefecture_select" value="5" data-child="area-child" class="area-hokkaido-pref"><label for="akita">秋田県</label></p>
+
+
+														<p><input type="checkbox" id="yamagata" name="prefecture_select" value="6" data-child="area-child" class="area-hokkaido-pref"><label for="yamagata">山形県</label></p>
+
+
+														<p><input type="checkbox" id="fukushima" name="prefecture_select" value="7" data-child="area-child" class="area-hokkaido-pref"><label for="fukushima">福島県</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<!-- 北陸・甲信越 -->
+											<dl class="area-container area-hokuriku">
+												<dt style="margin-bottom: 10px;">
+
+													<h3><input type="checkbox" id="area-hokuriku" name="area" value="2" class="area-parent"><label for="area-hokuriku">北陸・甲信越</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="toyama" name="prefecture_select" value="16" data-child="area-child" class="area-hokuriku-pref"><label for="toyama">富山県</label></p>
+
+
+														<p><input type="checkbox" id="niigata" name="prefecture_select" value="15" data-child="area-child" class="area-hokuriku-pref"><label for="niigata">新潟県</label></p>
+
+
+														<p><input type="checkbox" id="ishikawa" name="prefecture_select" value="17" data-child="area-child" class="area-hokuriku-pref"><label for="ishikawa">石川県</label></p>
+
+
+														<p><input type="checkbox" id="nagano" name="prefecture_select" value="20" data-child="area-child" class="area-hokuriku-pref"><label for="nagano">長野県</label></p>
+
+
+														<p><input type="checkbox" id="fukui" name="prefecture_select" value="18" data-child="area-child" class="area-hokuriku-pref"><label for="fukui">福井県</label></p>
+
+
+														<p><input type="checkbox" id="yamanashi" name="prefecture_select" value="19" data-child="area-child" class="area-hokuriku-pref"><label for="yamanashi">山梨県</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<!-- 関東 -->
+											<dl class="area-container area-kanto">
+												<dt style="margin-bottom: 10px;">
+
+													<h3><input type="checkbox" id="area-kanto" name="area" value="3" class="area-parent"><label for="area-kanto">関東</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="tokyo" name="prefecture_select" value="13" data-child="area-child" class="area-kanto-pref"><label for="tokyo">東京都</label></p>
+
+
+														<p><input type="checkbox" id="kanagawa" name="prefecture_select" value="14" data-child="area-child" class="area-kanto-pref"><label for="kanagawa">神奈川県</label></p>
+
+
+														<p><input type="checkbox" id="chiba" name="prefecture_select" value="12" data-child="area-child" class="area-kanto-pref"><label for="chiba">千葉県</label></p>
+
+
+														<p><input type="checkbox" id="saitama" name="prefecture_select" value="11" data-child="area-child" class="area-kanto-pref"><label for="saitama">埼玉県</label></p>
+
+
+														<p><input type="checkbox" id="ibaraki" name="prefecture_select" value="8" data-child="area-child" class="area-kanto-pref"><label for="ibaraki">茨城県</label></p>
+
+
+														<p><input type="checkbox" id="tochigi" name="prefecture_select" value="9" data-child="area-child" class="area-kanto-pref"><label for="tochigi">栃木県</label></p>
+
+
+														<p><input type="checkbox" id="gunma" name="prefecture_select" value="10" data-child="area-child" class="area-kanto-pref"><label for="gunma">群馬県</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<!-- 東海 -->
+											<dl class="area-container area-tokai">
+												<dt style="margin-bottom: 10px;">
+
+													<h3><input type="checkbox" id="area-tokai" name="area" value="4" class="area-parent"><label for="area-tokai">東海</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+
+													<p><input type="checkbox" id="aichi" name="prefecture_select" value="23" data-child="area-child" class="area-tokai-pref"><label for="aichi">愛知県</label></p>
+
+
+													<p><input type="checkbox" id="shizuoka" name="prefecture_select" value="22" data-child="area-child" class="area-tokai-pref"><label for="shizuoka">静岡県</label></p>
+
+
+													<p><input type="checkbox" id="gifu" name="prefecture_select" value="21" data-child="area-child" class="area-tokai-pref"><label for="gifu">岐阜県</label></p>
+
+
+													<p><input type="checkbox" id="mie" name="prefecture_select" value="24" data-child="area-child" class="area-tokai-pref"><label for="mie">三重県</label></p>
+
+												</dd>
+											</dl>
+											<!-- 関西 -->
+											<dl class="area-container area-kansai">
+												<dt style="margin-bottom: 10px;">
+
+													<h3><input type="checkbox" id="area-kansai" name="area" value="5" class="area-parent"><label for="area-kansai">関西</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="osaka" name="prefecture_select" value="27" data-child="area-child" class="area-kansai-pref"><label for="osaka">大阪府</label></p>
+
+
+														<p><input type="checkbox" id="kyoto" name="prefecture_select" value="26" data-child="area-child" class="area-kansai-pref"><label for="kyoto">京都府</label></p>
+
+
+														<p><input type="checkbox" id="hyogo" name="prefecture_select" value="28" data-child="area-child" class="area-kansai-pref"><label for="hyogo">兵庫県</label></p>
+
+
+														<p><input type="checkbox" id="shiga" name="prefecture_select" value="25" data-child="area-child" class="area-kansai-pref"><label for="shiga">滋賀県</label></p>
+
+
+														<p><input type="checkbox" id="nara" name="prefecture_select" value="29" data-child="area-child" class="area-kansai-pref"><label for="nara">奈良県</label></p>
+
+
+														<p><input type="checkbox" id="wakayama" name="prefecture_select" value="30" data-child="area-child" class="area-kansai-pref"><label for="wakayama">和歌山県</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<!-- 中国 -->
+											<dl class="area-container area-chugoku">
+												<dt style="margin-bottom: 10px;">
+
+													<h3><input type="checkbox" id="area-chugoku" name="area" value="6" class="area-parent"><label for="area-chugoku">中国</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="hiroshima" name="prefecture_select" value="34" data-child="area-child" class="area-chugoku-pref"><label for="hiroshima">広島県</label></p>
+
+
+														<p><input type="checkbox" id="okayama" name="prefecture_select" value="33" data-child="area-child" class="area-chugoku-pref"><label for="okayama">岡山県</label></p>
+
+
+														<p><input type="checkbox" id="totori" name="prefecture_select" value="31" data-child="area-child" class="area-chugoku-pref"><label for="totori">鳥取県</label></p>
+
+
+														<p><input type="checkbox" id="shimane" name="prefecture_select" value="32" data-child="area-child" class="area-chugoku-pref"><label for="shimane">島根県</label></p>
+
+
+														<p><input type="checkbox" id="yamaguchi" name="prefecture_select" value="35" data-child="area-child" class="area-chugoku-pref"><label for="yamaguchi">山口県</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<!-- 四国 -->
+											<dl class="area-container area-shikoku">
+												<dt style="margin-bottom: 10px;">
+
+													<h3><input type="checkbox" id="area-shikoku" name="area" value="7" class="area-parent"><label for="area-shikoku">四国</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+
+													<p><input type="checkbox" id="tokushima" name="prefecture_select" value="36" data-child="area-child" class="area-shikoku-pref"><label for="tokushima">徳島県</label></p>
+
+
+													<p><input type="checkbox" id="kagawa" name="prefecture_select" value="37" data-child="area-child" class="area-shikoku-pref"><label for="kagawa">香川県</label></p>
+
+
+													<p><input type="checkbox" id="ehime" name="prefecture_select" value="38" data-child="area-child" class="area-shikoku-pref"><label for="ehime">愛媛県</label></p>
+
+
+													<p><input type="checkbox" id="kochi" name="prefecture_select" value="39" data-child="area-child" class="area-shikoku-pref"><label for="kochi">高知県</label></p>
+
+												</dd>
+											</dl>
+											<!-- 九州・沖縄 -->
+											<dl class="area-container area-kyusyu">
+												<dt style="margin-bottom: 10px;">
+
+													<h3><input type="checkbox" id="area-kyusyu" name="area" value="8" class="area-parent"><label for="area-kyusyu">九州・沖縄</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="fukuoka" name="prefecture_select" value="40" data-child="area-child" class="area-kyusyu-pref"><label for="fukuoka">福岡県</label></p>
+
+
+														<p><input type="checkbox" id="kumamoto" name="prefecture_select" value="43" data-child="area-child" class="area-kyusyu-pref"><label for="kumamoto">熊本県</label></p>
+
+
+														<p><input type="checkbox" id="saga" name="prefecture_select" value="41" data-child="area-child" class="area-kyusyu-pref"><label for="saga">佐賀県</label></p>
+
+
+														<p><input type="checkbox" id="nagasaki" name="prefecture_select" value="42" data-child="area-child" class="area-kyusyu-pref"><label for="nagasaki">長崎県</label></p>
+
+
+														<p><input type="checkbox" id="ooita" name="prefecture_select" value="44" data-child="area-child" class="area-kyusyu-pref"><label for="ooita">大分県</label></p>
+
+
+														<p><input type="checkbox" id="miyazaki" name="prefecture_select" value="45" data-child="area-child" class="area-kyusyu-pref"><label for="miyazaki">宮崎県</label></p>
+
+
+														<p><input type="checkbox" id="kagoshima" name="prefecture_select" value="46" data-child="area-child" class="area-kyusyu-pref"><label for="kagoshima">鹿児島県</label></p>
+
+
+														<p><input type="checkbox" id="okinawa" name="prefecture_select" value="47" data-child="area-child" class="area-kyusyu-pref"><label for="okinawa">沖縄県</label></p>
+
+													</div>
+												</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="search-box__list mt30 flex">
+										<div><h4 class="box-ttl"><label for="">業種を選択</label></h4></div>
+										<div class="search-box__contents">
+											<div class="ac-open">
+												<div>
+													<p><span class="icon-plus">&#x002B;</span>業種を選ぶ</p>
+													<p><span class="icon-plus">&#x002D;</span>業種を閉じる</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="search-box__main">
+										<div class="search-table industry">
+											<dl class="flex industry-01">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-01" name="industry_select" value="20-0" class="industry-parent"><label for="industry-01">農業・林業</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">&nbsp;</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-02">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-02" name="industry_select" value="21-0" class="industry-parent"><label for="industry-02">漁業</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">&nbsp;</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-03">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-03" name="industry_select" value="14-0" class="industry-parent"><label for="industry-03">鉱業・採石業・砂利採取業</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="industry-03-01" name="industry_select" value="14-57" data-child="industry-child" class="industry-03-child"><label for="industry-03-01">金属鉱業</label></p>
+
+
+														<p><input type="checkbox" id="industry-03-03" name="industry_select" value="14-59" data-child="industry-child" class="industry-03-child"><label for="industry-03-03">非金属鉱業</label></p>
+
+
+														<p><input type="checkbox" id="industry-03-02" name="industry_select" value="14-58" data-child="industry-child" class="industry-03-child"><label for="industry-03-02">石炭・亜炭鉱業</label></p>
+
+
+														<p><input type="checkbox" id="industry-03-05" name="industry_select" value="1-2" data-child="industry-child" class="industry-03-child"><label for="industry-03-05">原油・天然ガス鉱業</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-04">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-04" name="industry_select" value="7-0" class="industry-parent"><label for="industry-04">建設業</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="industry-04-04" name="industry_select" value="7-27" data-child="industry-child" class="industry-04-child"><label for="industry-04-04">総合工事業</label></p>
+
+
+														<p><input type="checkbox" id="industry-04-03" name="industry_select" value="7-26" data-child="industry-child" class="industry-04-child"><label for="industry-04-03">職別工事業</label></p>
+
+
+														<p><input type="checkbox" id="industry-04-02" name="industry_select" value="7-25" data-child="industry-child" class="industry-04-child"><label for="industry-04-02">設備工事業</label></p>
+
+
+														<p><input type="checkbox" id="industry-04-01" name="industry_select" value="7-24" data-child="industry-child" class="industry-04-child"><label for="industry-04-01">インフラ工事</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-05">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-05" name="industry_select" value="13-0" class="industry-parent"><label for="industry-05">製造業（食品）</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="industry-05-03" name="industry_select" value="20-55" data-child="industry-child" class="industry-05-child"><label for="industry-05-03">畜産・水産業</label></p>
+
+
+														<p><input type="checkbox" id="industry-05-04" name="industry_select" value="20-56" data-child="industry-child" class="industry-05-child"><label for="industry-05-04">農産業</label></p>
+
+
+														<p><input type="checkbox" id="industry-05-02" name="industry_select" value="13-54" data-child="industry-child" class="industry-05-child"><label for="industry-05-02">食品加工</label></p>
+
+
+														<p><input type="checkbox" id="industry-05-01" name="industry_select" value="13-53" data-child="industry-child" class="industry-05-child"><label for="industry-05-01">飲料・たばこ製造</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-06">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-06" name="industry_select" value="15-0" class="industry-parent"><label for="industry-06">製造業（素材）</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="industry-06-04" name="industry_select" value="15-63" data-child="industry-child" class="industry-06-child"><label for="industry-06-04">繊維工業</label></p>
+
+
+														<p><input type="checkbox" id="industry-06-03" name="industry_select" value="15-62" data-child="industry-child" class="industry-06-child"><label for="industry-06-03">木材・木製品製造業</label></p>
+
+
+														<p><input type="checkbox" id="industry-06-09" name="industry_select" value="11-48" data-child="industry-child" class="industry-06-child"><label for="industry-06-09">家具・装備品製造業</label></p>
+
+
+														<p><input type="checkbox" id="industry-06-08" name="industry_select" value="15-67" data-child="industry-child" class="industry-06-child"><label for="industry-06-08">パルプ・紙・紙加工品製造業</label></p>
+
+
+														<p><input type="checkbox" id="industry-06-02" name="industry_select" value="15-61" data-child="industry-child" class="industry-06-child"><label for="industry-06-02">化学工業</label></p>
+
+
+														<p><input type="checkbox" id="industry-06-07" name="industry_select" value="15-66" data-child="industry-child" class="industry-06-child"><label for="industry-06-07">																	<p><input type="checkbox" id="industry-06-07" name="industry_select" value="15-66" data-child="industry-child" class="industry-06-child"><label for="industry-06-07">プラスチック製品製造業</label></p>
+</label></p>
+
+
+														<p><input type="checkbox" id="industry-06-01" name="industry_select" value="15-60" data-child="industry-child" class="industry-06-child"><label for="industry-06-01">その他素材加工製造業</label></p>
+
+
+														<p><input type="checkbox" id="industry-06-05" name="industry_select" value="15-64" data-child="industry-child" class="industry-06-child"><label for="industry-06-05">鉄鋼業</label></p>
+
+
+														<p><input type="checkbox" id="industry-06-06" name="industry_select" value="15-65" data-child="industry-child" class="industry-06-child"><label for="industry-06-06">非鉄金属製造業</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-07">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-07" name="industry_select" value="5-0" class="industry-parent"><label for="industry-07">製造業（電気・機械）</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="industry-07-01" name="industry_select" value="5-12" data-child="industry-child" class="industry-07-child"><label for="industry-07-01">はん用機械器具製造業</label></p>
+
+
+														<p><input type="checkbox" id="industry-07-02" name="industry_select" value="5-15" data-child="industry-child" class="industry-07-child"><label for="industry-07-02">生産用機械器具製造業</label></p>
+
+
+														<p><input type="checkbox" id="industry-07-03" name="industry_select" value="5-13" data-child="industry-child" class="industry-07-child"><label for="industry-07-03">業務用機械器具製造業</label></p>
+
+
+														<p><input type="checkbox" id="industry-07-04" name="industry_select" value="2-5" data-child="industry-child" class="industry-07-child"><label for="industry-07-04">医療用品製造業</label></p>
+
+
+														<p><input type="checkbox" id="industry-07-05" name="industry_select" value="5-16" data-child="industry-child" class="industry-07-child"><label for="industry-07-05">電子部品・デバイス・電子回路製造業</label></p>
+
+
+														<p><input type="checkbox" id="industry-07-06" name="industry_select" value="5-17" data-child="industry-child" class="industry-07-child"><label for="industry-07-06">半導体関連製造業</label></p>
+
+
+														<p><input type="checkbox" id="industry-07-07" name="industry_select" value="5-11" data-child="industry-child" class="industry-07-child"><label for="industry-07-07">電気機械器具製造業</label></p>
+
+
+														<p><input type="checkbox" id="industry-07-08" name="industry_select" value="5-14" data-child="industry-child" class="industry-07-child"><label for="industry-07-08">情報通信機械器具製造業</label></p>
+
+
+														<p><input type="checkbox" id="industry-07-10" name="industry_select" value="5-83" data-child="industry-child" class="industry-07-child"><label for="industry-07-10">輸送用機械器具製造業</label></p>
+
+
+														<p><input type="checkbox" id="industry-07-11" name="industry_select" value="5-81" data-child="industry-child" class="industry-07-child"><label for="industry-07-11">自動車部品製造</label></p>
+
+
+														<p><input type="checkbox" id="industry-07-12" name="industry_select" value="5-82" data-child="industry-child" class="industry-07-child"><label for="industry-07-12">船舶・航空部品製造業</label></p>
+
+
+														<p><input type="checkbox" id="industry-07-09" name="industry_select" value="5-18" data-child="industry-child" class="industry-07-child"><label for="industry-07-09">その他の製造業</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-09">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-09" name="industry_select" value="11-0" class="industry-parent"><label for="industry-09">製造業（その他）</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="industry-09-03" name="industry_select" value="11-47" data-child="industry-child" class="industry-09-child"><label for="industry-09-03">衣服・装飾製造</label></p>
+
+
+														<p><input type="checkbox" id="industry-09-04" name="industry_select" value="2-3" data-child="industry-child" class="industry-09-child"><label for="industry-09-04">医薬品製造</label></p>
+
+
+														<p><input type="checkbox" id="industry-09-02" name="industry_select" value="11-46" data-child="industry-child" class="industry-09-child"><label for="industry-09-02">化粧品等製造業</label></p>
+
+
+														<p><input type="checkbox" id="industry-09-01" name="industry_select" value="11-45" data-child="industry-child" class="industry-09-child"><label for="industry-09-01">その他製造業</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-10">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-10" name="industry_select" value="8-0" class="industry-parent"><label for="industry-10">電気・ガス・熱供給・水道業</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">&nbsp;</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-11">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-11" name="industry_select" value="9-0" class="industry-parent"><label for="industry-11">情報通信業</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="industry-11-07" name="industry_select" value="9-35" data-child="industry-child" class="industry-11-child"><label for="industry-11-07">通信業</label></p>
+
+
+														<p><input type="checkbox" id="industry-11-04" name="industry_select" value="9-32" data-child="industry-child" class="industry-11-child"><label for="industry-11-04">システム開発業</label></p>
+
+
+														<p><input type="checkbox" id="industry-11-05" name="industry_select" value="9-33" data-child="industry-child" class="industry-11-child"><label for="industry-11-05">ソフトウェア開発業</label></p>
+
+
+														<p><input type="checkbox" id="industry-11-01" name="industry_select" value="9-29" data-child="industry-child" class="industry-11-child"><label for="industry-11-01">インターネット附随サービス業</label></p>
+
+
+														<p><input type="checkbox" id="industry-11-02" name="industry_select" value="9-30" data-child="industry-child" class="industry-11-child"><label for="industry-11-02">インターネットメディア業</label></p>
+
+
+														<p><input type="checkbox" id="industry-11-03" name="industry_select" value="9-31" data-child="industry-child" class="industry-11-child"><label for="industry-11-03">コンテンツ制作・配信業</label></p>
+
+
+														<p><input type="checkbox" id="industry-11-06" name="industry_select" value="9-34" data-child="industry-child" class="industry-11-child"><label for="industry-11-06">広告制作業</label></p>
+
+
+														<p><input type="checkbox" id="industry-11-08" name="industry_select" value="9-36" data-child="industry-child" class="industry-11-child"><label for="industry-11-08">放送・出版業</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-12">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-12" name="industry_select" value="3-0" class="industry-parent"><label for="industry-12">運輸業・郵便業</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="industry-12-03" name="industry_select" value="3-8" data-child="industry-child" class="industry-12-child"><label for="industry-12-03">陸運業</label></p>
+
+
+														<p><input type="checkbox" id="industry-12-02" name="industry_select" value="3-7" data-child="industry-child" class="industry-12-child"><label for="industry-12-02">水運業</label></p>
+
+
+														<p><input type="checkbox" id="industry-12-01" name="industry_select" value="3-6" data-child="industry-child" class="industry-12-child"><label for="industry-12-01">航空輸送</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-13">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-13" name="industry_select" value="10-0" class="industry-parent"><label for="industry-13">卸売業・小売業</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="industry-13-06" name="industry_select" value="16-72" data-child="industry-child" class="industry-13-child"><label for="industry-13-06">総合商社</label></p>
+
+
+														<p><input type="checkbox" id="industry-13-04" name="industry_select" value="16-71" data-child="industry-child" class="industry-13-child"><label for="industry-13-04">繊維・建材卸売業</label></p>
+
+
+														<p><input type="checkbox" id="industry-13-02" name="industry_select" value="16-69" data-child="industry-child" class="industry-13-child"><label for="industry-13-02">飲食料品卸売業</label></p>
+
+
+														<p><input type="checkbox" id="industry-13-05" name="industry_select" value="16-73" data-child="industry-child" class="industry-13-child"><label for="industry-13-05">機械器具卸売業</label></p>
+
+
+														<p><input type="checkbox" id="industry-13-01" name="industry_select" value="16-68" data-child="industry-child" class="industry-13-child"><label for="industry-13-01">医薬品・化粧品等卸売業</label></p>
+
+
+														<p><input type="checkbox" id="industry-13-03" name="industry_select" value="16-70" data-child="industry-child" class="industry-13-child"><label for="industry-13-03">その他卸売業</label></p>
+
+
+														<p><input type="checkbox" id="industry-13-09" name="industry_select" value="10-42" data-child="industry-child" class="industry-13-child"><label for="industry-13-09">各種商品小売業</label></p>
+
+
+														<p><input type="checkbox" id="industry-13-14" name="industry_select" value="10-41" data-child="industry-child" class="industry-13-child"><label for="industry-13-14">織物・衣服・身の回り品小売業</label></p>
+
+
+														<p><input type="checkbox" id="industry-13-13" name="industry_select" value="10-40" data-child="industry-child" class="industry-13-child"><label for="industry-13-13">自動車小売業</label></p>
+
+
+														<p><input type="checkbox" id="industry-13-12" name="industry_select" value="10-39" data-child="industry-child" class="industry-13-child"><label for="industry-13-12">機械器具小売業</label></p>
+
+
+														<p><input type="checkbox" id="industry-13-08" name="industry_select" value="10-38" data-child="industry-child" class="industry-13-child"><label for="industry-13-08">医薬品・化粧品小売業</label></p>
+
+
+														<p><input type="checkbox" id="industry-13-07" name="industry_select" value="10-37" data-child="industry-child" class="industry-13-child"><label for="industry-13-07">Eコマース・無店舗販売業</label></p>
+
+
+														<p><input type="checkbox" id="industry-13-11" name="industry_select" value="10-44" data-child="industry-child" class="industry-13-child"><label for="industry-13-11">その他小売業</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-14">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-14" name="industry_select" value="6-0" class="industry-parent"><label for="industry-14">金融業・保険業</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="industry-14-02" name="industry_select" value="6-20" data-child="industry-child" class="industry-14-child"><label for="industry-14-02">銀行業</label></p>
+
+
+														<p><input type="checkbox" id="industry-14-04" name="industry_select" value="6-22" data-child="industry-child" class="industry-14-child"><label for="industry-14-04">証券等金融業</label></p>
+
+
+														<p><input type="checkbox" id="industry-14-03" name="industry_select" value="6-21" data-child="industry-child" class="industry-14-child"><label for="industry-14-03">金融商品等取引業</label></p>
+
+
+														<p><input type="checkbox" id="industry-14-01" name="industry_select" value="6-19" data-child="industry-child" class="industry-14-child"><label for="industry-14-01">補助的金融業等</label></p>
+
+
+														<p><input type="checkbox" id="industry-14-05" name="industry_select" value="6-23" data-child="industry-child" class="industry-14-child"><label for="industry-14-05">保険業</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-15">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-15" name="industry_select" value="17-0" class="industry-parent"><label for="industry-15">不動産業・物品賃貸業</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="industry-15-01" name="industry_select" value="17-74" data-child="industry-child" class="industry-15-child"><label for="industry-15-01">不動産取引業</label></p>
+
+
+														<p><input type="checkbox" id="industry-15-02" name="industry_select" value="17-75" data-child="industry-child" class="industry-15-child"><label for="industry-15-02">不動産賃貸業・管理業</label></p>
+
+
+														<p><input type="checkbox" id="industry-15-03" name="industry_select" value="18-76" data-child="industry-child" class="industry-15-child"><label for="industry-15-03">物品賃貸業</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-16">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-16" name="industry_select" value="18-0" class="industry-parent"><label for="industry-16">学術研究・専門/技術サービス業</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="industry-16-03" name="industry_select" value="18-78" data-child="industry-child" class="industry-16-child"><label for="industry-16-03">専門サービス業</label></p>
+
+
+														<p><input type="checkbox" id="industry-16-02" name="industry_select" value="18-77" data-child="industry-child" class="industry-16-child"><label for="industry-16-02">技術サービス業</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-17">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-17" name="industry_select" value="4-0" class="industry-parent"><label for="industry-17">宿泊業・飲食サービス業</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="industry-17-03" name="industry_select" value="4-52" data-child="industry-child" class="industry-17-child"><label for="industry-17-03">宿泊業</label></p>
+
+
+														<p><input type="checkbox" id="industry-17-01" name="industry_select" value="4-9" data-child="industry-child" class="industry-17-child"><label for="industry-17-01">飲食店</label></p>
+
+
+														<p><input type="checkbox" id="industry-17-02" name="industry_select" value="4-10" data-child="industry-child" class="industry-17-child"><label for="industry-17-02">持ち帰り・配達飲食サービス業</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-18">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-18" name="industry_select" value="12-0" class="industry-parent"><label for="industry-18">生活関連サービス業・娯楽業</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="industry-18-01" name="industry_select" value="4-51" data-child="industry-child" class="industry-18-child"><label for="industry-18-01">洗濯・理容・美容・浴場業</label></p>
+
+
+														<p><input type="checkbox" id="industry-18-02" name="industry_select" value="4-49" data-child="industry-child" class="industry-18-child"><label for="industry-18-02">娯楽業</label></p>
+
+													</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-19">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-19" name="industry_select" value="4-50" class="industry-parent"><label for="industry-19">教育・学習支援業</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">&nbsp;</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-20">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-20" name="industry_select" value="2-0" class="industry-parent"><label for="industry-20">医療・福祉</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">&nbsp;</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-21">
+												<dt>
+													<h3><input type="checkbox" id="industry-21" name="industry_select" value="-1" class="industry-parent" disabled title="この業種は選択できません"><label for="industry-21">複合サービス事業</label></h3>
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">&nbsp;</div>
+												</dd>
+											</dl>
+											<dl class="flex industry-22">
+												<dt>
+
+													<h3><input type="checkbox" id="industry-22" name="industry_select" value="47-0" class="industry-parent"><label for="industry-22">サービス業</label></h3>
+
+													<div class="ac-button"><span class="icon-arrow down"></span></div>
+												</dt>
+												<dd>
+													<div class="flex">
+
+														<p><input type="checkbox" id="industry-22-01" name="industry_select" value="18-80" data-child="industry-child" class="industry-22-child"><label for="industry-22-01">廃棄物・環境関連</label></p>
+
+
+														<p><input type="checkbox" id="industry-22-02" name="industry_select" value="18-79" data-child="industry-child" class="industry-22-child"><label for="industry-22-02">人材関連サービス</label></p>
+
+													</div>
+												</dd>
+											</dl>
+										</div>
+									</div>
+									<div class="search-box__list mt30 flex">
+										<div><h4 class="box-ttl"><label for="">詳しい条件を追加</label></h4></div>
+										<div class="search-box__contents">
+											<div class="ac-open">
+												<div>
+													<p><span class="icon-plus">&#x002B;</span>資本金・売上・その他を追加</p>
+													<p><span class="icon-plus">&#x002D;</span>資本金・売上・その他を閉じる</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="search-box__main">
+										<div class="search-table other">
+											<dl class="flex">
+												<dt><h4 class="box-ttl"><label for="">資本金</label></h4></dt>
+												<dd class="input2 price">
+													<div class="flex">
+<!--   -->
+														<div><input type="text" id="capital-lower" name="capital-lower" class="cost-length" size="" oninput="validateNumberInput(this);" value="" />　百万円　～　</div>
+														<div><input type="text" id="capital-upper" name="capital-upper" class="cost-length" size="" oninput="validateNumberInput(this);" value="" />　百万円</div>
+
+													</div>
+												</dd>
+											</dl>
+											<dl class="flex">
+												<dt><h4 class="box-ttl"><label for="">売上</label></h4></dt>
+												<dd class="input2 price">
+													<div class="flex">
+<!--   -->
+														<div><input type="text" id="earnings-lower" name="earnings-lower" class="cost-length" size="" oninput="validateNumberInput(this);" value="" />　百万円　～　</div>
+														<div><input type="text" id="earnings-upper" name="earnings-upper" class="cost-length" size="" oninput="validateNumberInput(this);" value="" />　百万円</div>
+
+													</div>
+												</dd>
+											</dl>
+											<dl class="flex">
+												<dt><h4 class="box-ttl"><label for="">その他</label></h4></dt>
+												<dd class="other-list">
+													<div class="flex">
+
+<!-- 0 -->
+														<div><input type="checkbox" id="only_publiclist" name="only_publiclist" onclick="" value="other1" class="pref"><label for="only_publiclist">上場会社のみ</label></div>
+
+
+														<div><input type="checkbox" id="has_comname" name="has_comname" onclick="" value="other2" class="pref" checked="checked"><label for="has_comname">会社名抽出分のみ</label></div>
+
+<!-- 0 -->
+														<div><input type="checkbox" id="has_amount" name="has_amount" onclick="" value="other3" class="pref"><label for="has_amount">ページが少ない・簡素なサイトを除く</label></div>
+
+<!-- 0 -->
+														<div><input type="checkbox" id="has_ma" name="has_ma" onclick="" value="other4" class="pref"><label for="has_ma">過去に子会社化や資本提携の可能性あり</label></div>
+
+
+													</div>
+												</dd>
+											</dl>
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="search-form__footer">
+								<button type="submit" id="search__footer__btn" class="search-footer__btn no-form page-link__btn">検索する</button>
+								<!-- <div class="area-right">
+									<div class="ac-open">
+										<div class="flex"><span class="icon-plus">&#x002B;</span><p>さらに詳しい条件を選択する</p></div>
+										<div class="flex"><span class="icon-minus">&#x002D;</span><p>詳しい条件を閉める</p></div>
+									</div>
+								</div> -->
+							</div>
+
+						</form>
+					</div>
+
+				</div>
+			</section>
+			<section class='contents-body__inner' id='page-search' style="margin-bottom: 20px;">
+
+<div class="wrap-container">
+	<div class="bloc-header" style="margin-bottom: 18px;">
+		<div class="ttl-area">
+			<h3 class="main-ttl"><span>Result</span></h3>
+			<h4 class="main-sub__ttl"><span>検索結果一覧</span></h4>
+		</div>
+	</div>
+	<div class="bloc-body" data-value="100">
+
+
+	<p>会社名に「工務店」含むホームページが5件超見つかりました。うち、法人格を除いた会社名（一部略称）の包含率順で上位 5 件を表示します。以下の結果はAIにより生成しています。</p>
+
+
+
+	<div class="result-area2">
+		<div class="news-item">
+			<div class="news-header">
+				<span class="news-category">組織編成</span>
+				<span class="news-date">2023年11月25日</span>
+			</div>
+			<h3 class="news-title">新規事業部門の設立に関する戦略的パートナーシップの締結について</h3>
+			<div class="news-content">
+				<p class="news-company">株式会社テクノフロント</p>
+				<p class="news-url"><a href="https://example.com/news/123" target="_blank">https://example.com/news/123</a></p>
+			</div>
+			<div class="news-buttons">
+				<a href="/search?company=テクノフロント" class="btn btn-similar">類似会社を探す</a>
+				<a href="/company/details/123" class="btn btn-detail">会社情報詳細</a>
+			</div>
+		</div>
+
+		<div class="news-item">
+			<div class="news-header">
+				<span class="news-category">海外展開</span>
+				<span class="news-date">2023年11月22日</span>
+			</div>
+			<h3 class="news-title">アジア市場における新戦略発表および現地法人設立計画について</h3>
+			<div class="news-content">
+				<p class="news-company">グローバルトレード株式会社</p>
+				<p class="news-url"><a href="https://example.com/news/456" target="_blank">https://example.com/news/456</a></p>
+			</div>
+			<div class="news-buttons">
+				<a href="/search?company=グローバルトレード" class="btn btn-similar">類似会社を探す</a>
+				<a href="/company/details/456" class="btn btn-detail">会社情報詳細</a>
+			</div>
+		</div>
+
+		<div class="news-item">
+			<div class="news-header">
+				<span class="news-category">商品開発</span>
+				<span class="news-date">2023年11月20日</span>
+			</div>
+			<h3 class="news-title">環境配慮型製品の開発成功および次世代エコ素材の特許取得について</h3>
+			<div class="news-content">
+				<p class="news-company">エコテックソリューション株式会社</p>
+				<p class="news-url"><a href="https://example.com/news/789" target="_blank">https://example.com/news/789</a></p>
+			</div>
+			<div class="news-buttons">
+				<a href="/search?company=エコテックソリューション" class="btn btn-similar">類似会社を探す</a>
+				<a href="/company/details/789" class="btn btn-detail">会社情報詳細</a>
+			</div>
+		</div>
+
+		<div class="news-item">
+			<div class="news-header">
+				<span class="news-category">イベント</span>
+				<span class="news-date">2023年11月18日</span>
+			</div>
+			<h3 class="news-title">年末決算報告会のオンライン開催および投資家向け新サービス発表について</h3>
+			<div class="news-content">
+				<p class="news-company">フィナンシャルパートナーズ株式会社</p>
+				<p class="news-url"><a href="https://example.com/news/012" target="_blank">https://example.com/news/012</a></p>
+			</div>
+			<div class="news-buttons">
+				<a href="/search?company=フィナンシャルパートナーズ" class="btn btn-similar">類似会社を探す</a>
+				<a href="/company/details/012" class="btn btn-detail">会社情報詳細</a>
+			</div>
+		</div>
+
+		<div class="news-item">
+			<div class="news-header">
+				<span class="news-category">人事</span>
+				<span class="news-date">2023年11月15日</span>
+			</div>
+			<h3 class="news-title">新CEOの就任および経営体制の刷新に関するお知らせ</h3>
+			<div class="news-content">
+				<p class="news-company">イノベーションテクノロジー株式会社</p>
+				<p class="news-url"><a href="https://example.com/news/345" target="_blank">https://example.com/news/345</a></p>
+			</div>
+			<div class="news-buttons">
+				<a href="/search?company=イノベーションテクノロジー" class="btn btn-similar">類似会社を探す</a>
+				<a href="/company/details/345" class="btn btn-detail">会社情報詳細</a>
+			</div>
+		</div>
+	</div>
+
+			</section>
+		</div>
+	</main>
+	<footer id="footer">
+		<div id="footer-inner">
+			<div class="flex align-items-center">
+				<div class="logo-area">
+					<a href="/" id="footer-logo">
+						<img src="https://bizrelay.jp/img/common/logo_white.svg" alt="Bizrelay" width="100%" height="auto">
+					</a>
+				</div>
+				<div class="footer-nav__area">
+					<div class="footer-nav flex">
+						<ul class="flex">
+							<li><a href="/about" class="page-link__nav">Bizrelayについて</a></li>
+							<li><a href="/search" class="page-link__nav">会社を探す</a></li>
+							<!-- <li><a href="/simulation" class="page-link__nav">会社の価格を調べる</a></li> -->
+							<li><a href="./simulation/simulationDummy2.html" class="page-link__nav">会社の価格を調べる</a></li>
+							<li><a href="/casestudy/list.php" class="page-link__nav">M＆A成功事例</a></li>
+						</ul>
+						<ul class="flex">
+							<li><a href="/faq" class="page-link__nav">よくあるご質問</a></li>
+							<li><a href="/contact/" class="page-link__nav">ご意見・ご要望</a></li>
+						</ul>
+						<ul class="flex">
+							<li><a href="https://www.advi.co.jp/" target="_blank" class="page-link__nav">運営会社</a></li>
+							<li><a href="/privacy-policy" class="page-link__nav">プライバシーポリシー</a></li>
+							<li><a href="/terms" class="page-link__nav">利用規約</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p id="copyright"><small><span>&copy;</span> Bizrelay All rights Reserved.</small></p>
+	</footer>
+
+	<!-- <div id="pagetop"><span class="arrow"></span><p>TOP</p></div> -->
+	<div id="trigger">
+		<div id="trigger-inner">
+			<div id="trigger-inner__bloc">
+				<a class="menu-trigger" href="javascript:void(0)" onClick="return false;">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+			</div>
+			<div id="trigger-inner__menu">
+				<nav class="sp-nav">
+					<ul class="flex">
+						<li><a href="/about" class="page-link__nav">Bizrelayについて</a></li>
+						<li><a href="/search" class="page-link__nav">会社を探す</a></li>
+						<!-- <li><a href="/simulation" class="page-link__nav">会社の価格を調べる</a></li> -->
+						<li><a href="/simulation/simulationDummy2.html" class="page-link__nav">会社の価格を調べる</a></li>
+						<li><a href="/casestudy/list.php" class="page-link__nav">M＆A成功事例</a></li>
+						<li><a href="/faq" class="page-link__nav">よくあるご質問</a></li>
+						<li><a href="/contact" class="page-link__nav">ご意見・ご要望</a></li>
+						<li><a href="https://www.advi.co.jp/" target="_blank" class="page-link__nav">運営会社</a></li>
+						<li><a href="/privacy-policy" class="page-link__nav">プライバシーポリシー</a></li>
+						<li><a href="/terms" class="page-link__nav">利用規約</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="https://bizrelay.jp/js/site.js?t=20240806"></script>
+	<script>
+
+  // faq　アコーディオン
+  $( '.faq.ac > span' ).on('click', function() {
+    $( this ).parent().toggleClass("open");
+    $( this ).next( 'div' ).slideToggle( 200 );
+  });
+  $( '.faq2.ac2 > dt' ).on('click', function() {
+    $( this ).parent().toggleClass("open");
+    $( this ).next( 'dd' ).slideToggle( 200 );
+  });
+	  </script>
+</body>
+</html>
