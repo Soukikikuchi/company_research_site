@@ -1,11 +1,10 @@
-/* 直近の企業ニュース用スタイル */
+/* 直近の企業ニュース用スタイル - 硬い印象に修正 */
 .latest-news {
   margin-top: 30px;
-  background-color: #fff;
-  border-radius: 8px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
   padding: 25px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
 }
 
 .latest-news__title {
@@ -14,7 +13,8 @@
   color: #333;
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #4487e1;
+  border-bottom: 1px solid #4487e1;
+  text-align: left;
 }
 
 .latest-news__list {
@@ -22,11 +22,12 @@
 }
 
 .latest-news__item {
-  padding: 15px;
-  margin-bottom: 10px;
+  padding: 12px 15px;
+  margin-bottom: 8px;
   background-color: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
+  border: 1px solid #ddd;
+  border-left: 3px solid #4487e1;
+  border-radius: 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -34,7 +35,7 @@
 }
 
 .latest-news__item:hover {
-  background-color: #f8f9fa;
+  background-color: #f5f7fa;
 }
 
 .latest-news__item:last-child {
@@ -42,14 +43,16 @@
 }
 
 .news-date {
-  color: #666;
-  font-size: 13px;
+  color: #555;
+  font-size: 12px;
   margin-right: 15px;
   min-width: 85px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
 }
 
 .news-title {
-  color: #4487e1;
+  color: #333;
   font-weight: 500;
   font-size: 14px;
   margin-right: 15px;
@@ -57,12 +60,13 @@
 }
 
 .news-company {
-  color: #555;
-  font-size: 13px;
-  background-color: #f0f2f5;
-  padding: 4px 10px;
-  border-radius: 4px;
+  color: #444;
+  font-size: 12px;
+  background-color: #eef1f5;
+  padding: 3px 8px;
+  border-radius: 2px;
   white-space: nowrap;
+  border: 1px solid #e0e4e9;
 }
 
 /* レスポンシブ対応 */
